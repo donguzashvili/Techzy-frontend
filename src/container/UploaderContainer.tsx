@@ -38,8 +38,9 @@ const UploaderContainer: React.FC = () => {
     e.dataTransfer.dropEffect = "copy";
 
     if (draggedIndex === null || draggedIndex === overIndex) return;
+    if (!files[overIndex]?.id) return;
 
-    setDragTargetId(files[overIndex].id!);
+    setDragTargetId(files[overIndex].id);
 
     const updated = [...files];
     const [moved] = updated.splice(draggedIndex, 1);
@@ -76,6 +77,8 @@ const UploaderContainer: React.FC = () => {
       toast.error("Only images are allowed");
       return;
     }
+
+    if (!filesArr.length) return;
 
     const formData = new FormData();
     filesArr.forEach((file) => formData.append("image", file));
