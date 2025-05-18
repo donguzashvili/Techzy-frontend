@@ -1,0 +1,15 @@
+@use "@/style/_index.scss" as *;
+
+.loader {
+  animation: 1.5s rotate linear infinite;
+  height: 50px;
+  width: 50px;
+
+  svg {
+    stroke: $white;
+
+    path {
+      stroke: $white;
+    }
+  }
+}

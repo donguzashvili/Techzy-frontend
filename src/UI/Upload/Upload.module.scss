@@ -1,0 +1,47 @@
+@use "@/style/_index.scss" as *;
+
+.upload {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  border-radius: 8px;
+  width: 100%;
+  height: 250px;
+  border: 1px dashed $black;
+
+  .container {
+    .content {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      gap: 10px;
+
+      svg {
+        height: 30px;
+        width: 30px;
+      }
+    }
+  }
+
+  &:hover {
+    background-color: $shadow;
+
+    .content {
+      p {
+        color: $white;
+      }
+
+      svg {
+        path {
+          stroke: $white;
+        }
+      }
+    }
+  }
+
+  input {
+    display: none;
+  }
+}

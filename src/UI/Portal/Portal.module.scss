@@ -1,0 +1,13 @@
+@use "@/style/_index.scss" as *;
+
+.portal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: $shadow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

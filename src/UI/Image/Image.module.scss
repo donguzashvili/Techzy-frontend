@@ -1,0 +1,79 @@
+@use "@/style/_index.scss" as *;
+
+.image {
+  overflow: hidden;
+  border-radius: 4px;
+  position: relative;
+  height: 250px;
+  cursor: grab;
+
+  img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+  .actions {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $shadow;
+    transition: all 0.3s ease-in-out;
+    align-items: center;
+    justify-content: center;
+
+    .actionsContainer {
+      background-color: $white;
+      padding: 10px;
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 10px;
+      width: 80%;
+
+      button {
+        border-radius: 4px;
+        cursor: pointer;
+
+        svg {
+          height: 20px;
+          width: 20px;
+        }
+
+        &.edit {
+          background-color: $dark;
+          path {
+            stroke: $white;
+          }
+        }
+
+        &.delete {
+          background-color: $red;
+          path {
+            stroke: $white;
+            fill: $white;
+          }
+        }
+      }
+    }
+  }
+
+  &:hover {
+    .actions {
+      display: flex;
+    }
+  }
+}
+
+.modalWrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10px;
+
+  button {
+    background-color: $dark;
+    color: $white;
+  }
+}

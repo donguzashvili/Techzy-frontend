@@ -1,0 +1,13 @@
+@use "@/style/_index.scss" as *;
+
+.btn {
+  padding: 8px 10px;
+  border-radius: 4px;
+  border: 1px solid $black;
+  cursor: pointer;
+  background-color: transparent;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}

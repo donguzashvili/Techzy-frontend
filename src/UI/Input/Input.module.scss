@@ -1,0 +1,19 @@
+@use "@/style/_index.scss" as *;
+
+.label {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 8px;
+
+  input {
+    border: 1px solid $gray;
+    padding: 8px 10px;
+    border-radius: 4px;
+    outline: none;
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}

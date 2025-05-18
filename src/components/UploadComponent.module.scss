@@ -1,0 +1,22 @@
+@use "@/style/_index.scss" as *;
+
+.imageContainer {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+
+  @include media(tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include media(laptop) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    user-select: none;
+  }
+}
