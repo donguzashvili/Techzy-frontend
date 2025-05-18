@@ -24,14 +24,7 @@ The **FileUploader** component allows users to:
 
 ---
 
-## Installation & Setup
-
-### Prerequisites
-
-- Node.js (v16 or newer recommended)
-- npm
-
-### Getting Started
+### Start Project
 
 ```bash
 npm install
